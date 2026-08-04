@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bandage text-ink font-body antialiased;
+}
+
+::selection {
+  @apply bg-teal text-bandage;
+}
+
+/* visible keyboard focus, kept consistent site-wide */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #0F6E63;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.eyebrow {
+  @apply font-mono text-xs tracking-[0.2em] uppercase text-teal;
+}
+
+.stitch-rule {
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    currentColor 0,
+    currentColor 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  color: #C7CDD1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
