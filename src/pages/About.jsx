@@ -72,7 +72,7 @@ export default function About() {
             {process.map((p, i) => (
               <RevealOnScroll key={p.step} delay={i * 0.12} className="relative">
                 <div className="flex md:flex-col items-start md:items-start gap-4 md:gap-6">
-                  <div className="relative z-10 w-12 h-12 shrink-0 rounded-full bg-ink text-bandage flex items-center justify-center font-mono text-sm">
+                  <div className="relative z-10 w-12 h-12 shrink-0 rounded-full bg-ink text-paper flex items-center justify-center font-mono text-sm">
                     {String(i + 1).padStart(2, '0')}
                   </div>
                   <div>
@@ -91,10 +91,10 @@ export default function About() {
       </section>
 
       {/* VALUES */}
-      <section className="bg-ink text-bandage">
+      <section className="bg-ink text-paper">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
           <RevealOnScroll>
-            <p className="eyebrow text-teal-light mb-3">What guides us</p>
+            <p className="eyebrow text-orange-light mb-3">What guides us</p>
             <h2 className="font-display font-semibold text-3xl sm:text-4xl max-w-xl">
               A small factory's priorities, stated plainly.
             </h2>
@@ -103,7 +103,7 @@ export default function About() {
           <div className="mt-14 grid md:grid-cols-3 gap-10">
             {values.map((v, i) => (
               <RevealOnScroll key={v.title} delay={i * 0.1}>
-                <h3 className="font-display font-semibold text-xl mb-3 text-bandage">
+                <h3 className="font-display font-semibold text-xl mb-3 text-paper">
                   {v.title}
                 </h3>
                 <p className="text-steel-light text-[15px] leading-relaxed">{v.body}</p>

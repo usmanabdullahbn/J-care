@@ -79,7 +79,7 @@ export default function Home() {
           >
             <NavLink
               to="/products"
-              className="group inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-bandage hover:bg-teal-dark transition-colors"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-paper hover:bg-orange-dark transition-colors"
             >
               View Products
               <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -126,15 +126,15 @@ export default function Home() {
         <div className="mt-12 grid sm:grid-cols-2 gap-6">
           {categories.map((cat, i) => (
             <RevealOnScroll key={cat.name} delay={i * 0.08}>
-              <div className="group h-full rounded-2xl border border-steel-light bg-white/60 p-7 hover:border-teal hover:shadow-lg hover:shadow-teal/5 hover:-translate-y-1 transition-all duration-300">
-                <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-amber mb-3">
+              <div className="group h-full rounded-2xl border border-steel-light bg-white/60 p-7 hover:border-orange hover:shadow-lg hover:shadow-orange/5 hover:-translate-y-1 transition-all duration-300">
+                <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-rust mb-3">
                   {cat.spec}
                 </p>
                 <h3 className="font-display font-semibold text-xl text-ink mb-2">
                   {cat.name}
                 </h3>
                 <p className="text-sm text-steel-dark leading-relaxed">{cat.desc}</p>
-                <StitchDivider className="mt-6 mb-0 text-steel-light group-hover:text-teal-light transition-colors" />
+                <StitchDivider className="mt-6 mb-0 text-steel-light group-hover:text-orange-light transition-colors" />
               </div>
             </RevealOnScroll>
           ))}
@@ -142,10 +142,10 @@ export default function Home() {
       </section>
 
       {/* MANUFACTURING SPEC STRIP */}
-      <section className="bg-ink text-bandage">
+      <section className="bg-ink text-paper">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
           <RevealOnScroll>
-            <p className="eyebrow text-teal-light mb-3">Why buy from a manufacturer</p>
+            <p className="eyebrow text-orange-light mb-3">Why buy from a manufacturer</p>
             <h2 className="font-display font-semibold text-3xl sm:text-4xl max-w-xl">
               Every piece is made in-house — so quality and pricing stay in our control.
             </h2>
@@ -155,7 +155,7 @@ export default function Home() {
             {specs.map((s, i) => (
               <RevealOnScroll key={s.label} delay={i * 0.08}>
                 <div className="border-b border-steel-dark/50 pb-5">
-                  <p className="font-mono text-xs tracking-[0.15em] text-teal-light mb-2">
+                  <p className="font-mono text-xs tracking-[0.15em] text-orange-light mb-2">
                     {s.label}
                   </p>
                   <p className="text-steel-light text-[15px]">{s.value}</p>
@@ -166,19 +166,19 @@ export default function Home() {
 
           <RevealOnScroll delay={0.2} className="mt-14 flex flex-wrap gap-8">
             <div className="flex items-center gap-3">
-              <Factory size={20} className="text-teal-light" />
+              <Factory size={20} className="text-orange-light" />
               <span className="text-sm text-steel-light">In-house manufacturing</span>
             </div>
             <div className="flex items-center gap-3">
-              <ShieldCheck size={20} className="text-teal-light" />
+              <ShieldCheck size={20} className="text-orange-light" />
               <span className="text-sm text-steel-light">Quality-checked stitching</span>
             </div>
             <div className="flex items-center gap-3">
-              <Truck size={20} className="text-teal-light" />
+              <Truck size={20} className="text-orange-light" />
               <span className="text-sm text-steel-light">Cash on delivery</span>
             </div>
             <div className="flex items-center gap-3">
-              <Boxes size={20} className="text-teal-light" />
+              <Boxes size={20} className="text-orange-light" />
               <span className="text-sm text-steel-light">Wholesale &amp; bulk orders</span>
             </div>
           </RevealOnScroll>
@@ -187,14 +187,14 @@ export default function Home() {
 
       {/* CTA BANNER */}
       <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
-        <RevealOnScroll className="rounded-3xl bg-teal/5 border border-teal/20 px-8 sm:px-14 py-14 text-center">
+        <RevealOnScroll className="rounded-3xl bg-orange/5 border border-orange/20 px-8 sm:px-14 py-14 text-center">
           <p className="eyebrow mb-4">Ordering in bulk?</p>
           <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-2xl mx-auto">
             Get factory-direct pricing on braces, belts and supports.
           </h2>
           <NavLink
             to="/contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-teal px-7 py-3.5 font-mono text-xs tracking-wide uppercase text-bandage hover:bg-teal-dark transition-colors"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-orange px-7 py-3.5 font-mono text-xs tracking-wide uppercase text-paper hover:bg-orange-dark transition-colors"
           >
             Talk to us
             <ArrowRight size={15} />

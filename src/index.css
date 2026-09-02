@@ -7,11 +7,11 @@ html {
 }
 
 body {
-  @apply bg-bandage text-ink font-body antialiased;
+  @apply bg-paper text-ink font-body antialiased;
 }
 
 ::selection {
-  @apply bg-teal text-bandage;
+  @apply bg-orange text-paper;
 }
 
 /* visible keyboard focus, kept consistent site-wide */
@@ -19,13 +19,13 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #0F6E63;
+  outline: 2px solid #EE5A28;
   outline-offset: 3px;
   border-radius: 2px;
 }
 
 .eyebrow {
-  @apply font-mono text-xs tracking-[0.2em] uppercase text-teal;
+  @apply font-mono text-xs tracking-[0.2em] uppercase text-orange;
 }
 
 .stitch-rule {
@@ -37,7 +37,7 @@ textarea:focus-visible {
     transparent 6px,
     transparent 12px
   );
-  color: #C7CDD1;
+  color: #E4E1DC;
 }
 
 @media (prefers-reduced-motion: reduce) {

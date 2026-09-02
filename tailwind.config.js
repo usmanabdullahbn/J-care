@@ -4,19 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#0B2027',
-        teal: {
-          DEFAULT: '#0F6E63',
-          light: '#17958A',
-          dark: '#0A4F47',
+        ink: '#141414',
+        // brand orange, sampled from the J-Kare mark
+        orange: {
+          DEFAULT: '#EE5A28',
+          light: '#F4834F',
+          dark: '#C8451B',
         },
-        bandage: '#F3EFE7',
+        paper: '#FFFFFF',
         steel: {
-          DEFAULT: '#8B98A0',
-          light: '#C7CDD1',
-          dark: '#5B666C',
+          DEFAULT: '#8B8F94',
+          light: '#E4E1DC',
+          dark: '#57595C',
         },
-        amber: '#E0A458',
+        rust: '#C8451B',
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],

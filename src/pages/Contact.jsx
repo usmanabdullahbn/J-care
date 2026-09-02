@@ -60,8 +60,8 @@ export default function Contact() {
             {info.map((item) => {
               const Icon = item.icon
               const content = (
-                <div className="h-full rounded-2xl border border-steel-light bg-white/60 p-6 hover:border-teal transition-colors">
-                  <Icon size={20} className="text-teal mb-4" />
+                <div className="h-full rounded-2xl border border-steel-light bg-white/60 p-6 hover:border-orange transition-colors">
+                  <Icon size={20} className="text-orange mb-4" />
                   <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-steel mb-1">
                     {item.label}
                   </p>
@@ -81,9 +81,9 @@ export default function Contact() {
               href="https://www.facebook.com/J.karesurgical/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 text-ink hover:text-teal transition-colors"
+              className="flex items-center gap-3 text-ink hover:text-orange transition-colors"
             >
-              <Facebook size={20} className="text-teal" />
+              <Facebook size={20} className="text-orange" />
               <span>
                 <span className="block font-medium">J-Kare Surgical Store</span>
                 <span className="block text-sm text-steel-dark">Follow for offers &amp; new stock</span>
@@ -118,7 +118,7 @@ export default function Contact() {
                 <input
                   required
                   type="text"
-                  className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-teal transition-colors"
+                  className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-orange transition-colors"
                   placeholder="Your name"
                 />
               </div>
@@ -129,7 +129,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
-                    className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-teal transition-colors"
+                    className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-orange transition-colors"
                     placeholder="03xx-xxxxxxx"
                   />
                 </div>
@@ -137,7 +137,7 @@ export default function Contact() {
                   <label className="font-mono text-[10px] tracking-[0.15em] uppercase text-steel">
                     Order type
                   </label>
-                  <select className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-teal transition-colors">
+                  <select className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-orange transition-colors">
                     <option>Retail</option>
                     <option>Wholesale</option>
                     <option>Custom sizing</option>
@@ -151,14 +151,14 @@ export default function Contact() {
                 <textarea
                   required
                   rows={4}
-                  className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-teal transition-colors resize-none"
+                  className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-orange transition-colors resize-none"
                   placeholder="Tell us what you need — product, quantity, sizes..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-bandage hover:bg-teal-dark transition-colors"
+                className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-orange px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-paper hover:bg-orange-dark transition-colors"
               >
                 <Send size={14} />
                 Send inquiry
@@ -168,7 +168,7 @@ export default function Contact() {
                 <motion.p
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-sm text-teal-dark font-medium text-center"
+                  className="text-sm text-orange-dark font-medium text-center"
                 >
                   Thanks — this form isn't connected to an inbox yet. Wire it
                   up to Formspree, EmailJS or your own backend to start

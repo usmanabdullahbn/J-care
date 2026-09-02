@@ -6,10 +6,10 @@ export default function Marquee({ items }) {
         {loop.map((item, i) => (
           <span
             key={i}
-            className="font-mono text-xs tracking-[0.15em] uppercase text-bandage/80 flex items-center gap-10"
+            className="font-mono text-xs tracking-[0.15em] uppercase text-paper/80 flex items-center gap-10"
           >
             {item}
-            <span className="text-amber">•</span>
+            <span className="text-rust">•</span>
           </span>
         ))}
       </div>

@@ -101,7 +101,7 @@ export default function Products() {
               onClick={() => setActive(f)}
               className={`rounded-full px-5 py-2.5 font-mono text-xs tracking-wide uppercase transition-colors ${
                 active === f
-                  ? 'bg-ink text-bandage'
+                  ? 'bg-ink text-paper'
                   : 'bg-white/60 text-steel-dark border border-steel-light hover:border-ink hover:text-ink'
               }`}
             >
@@ -120,7 +120,7 @@ export default function Products() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              className="group rounded-2xl border border-steel-light bg-white/60 overflow-hidden hover:border-teal hover:shadow-lg hover:shadow-teal/5 transition-all duration-300"
+              className="group rounded-2xl border border-steel-light bg-white/60 overflow-hidden hover:border-orange hover:shadow-lg hover:shadow-orange/5 transition-all duration-300"
             >
               <div className="aspect-[4/3] bg-steel-light/25 border-b border-dashed border-steel flex items-center justify-center">
                 <span className="font-mono text-[11px] tracking-wide uppercase text-steel-dark px-4 text-center">
@@ -129,7 +129,7 @@ export default function Products() {
                 </span>
               </div>
               <div className="p-6">
-                <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-amber mb-2">
+                <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-rust mb-2">
                   {p.category}
                 </p>
                 <h3 className="font-display font-semibold text-lg text-ink mb-4">
@@ -157,7 +157,7 @@ export default function Products() {
                   href="https://wa.me/920000000000"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 font-mono text-xs tracking-wide uppercase text-teal hover:text-teal-dark transition-colors"
+                  className="mt-6 inline-flex items-center gap-2 font-mono text-xs tracking-wide uppercase text-orange hover:text-orange-dark transition-colors"
                 >
                   <MessageCircle size={14} />
                   Wholesale inquiry
