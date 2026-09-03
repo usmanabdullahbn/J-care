@@ -57,9 +57,7 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display font-semibold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.05] text-ink"
           >
-            Orthopedic supports,
-            <br />
-            engineered to hold up.
+            Manufacturing medical solutions for businesses worldwide.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 12 }}
@@ -67,9 +65,10 @@ export default function Home() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-6 text-steel-dark text-lg max-w-md"
           >
-            J-Kare Surgical designs, stitches and quality-checks braces,
-            belts and mobility supports in-house — then sells them retail
-            and wholesale, across Pakistan and to international markets.
+            J-Kare Surgical manufactures a diverse range of medical,
+            orthopedic and healthcare products for distributors and
+            businesses across Pakistan and international markets — with
+            in-house production, consistent quality, and reliable supply.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
