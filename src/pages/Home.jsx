@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, ShieldCheck, Factory, Truck, Boxes } from 'lucide-react'
+import { ArrowRight, ShieldCheck, Factory, Globe, Boxes } from 'lucide-react'
 import PageWrapper from '../components/PageWrapper.jsx'
 import RevealOnScroll from '../components/RevealOnScroll.jsx'
 import StitchDivider from '../components/StitchDivider.jsx'
@@ -69,7 +69,7 @@ export default function Home() {
           >
             J-Kare Surgical designs, stitches and quality-checks braces,
             belts and mobility supports in-house — then sells them retail
-            and wholesale, cash on delivery, across Pakistan.
+            and wholesale, across Pakistan and to international markets.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
@@ -108,7 +108,7 @@ export default function Home() {
           'Manufacturer',
           'Wholesale Pricing',
           'Retail Store',
-          'Cash on Delivery',
+          'International Markets',
           'Bulk Orders',
           'Custom Sizing',
         ]}
@@ -174,8 +174,8 @@ export default function Home() {
               <span className="text-sm text-steel-light">Quality-checked stitching</span>
             </div>
             <div className="flex items-center gap-3">
-              <Truck size={20} className="text-orange-light" />
-              <span className="text-sm text-steel-light">Cash on delivery</span>
+              <Globe size={20} className="text-orange-light" />
+              <span className="text-sm text-steel-light">International markets</span>
             </div>
             <div className="flex items-center gap-3">
               <Boxes size={20} className="text-orange-light" />
