@@ -11,11 +11,13 @@ export default {
           light: '#F4834F',
           dark: '#C8451B',
         },
-        paper: '#FFFFFF',
+        // warm ivory instead of stark white — sits better against the orange
+        paper: '#FBF7F1',
+        card: '#FFFDFA',
         steel: {
-          DEFAULT: '#8B8F94',
-          light: '#E4E1DC',
-          dark: '#57595C',
+          DEFAULT: '#8B8580',
+          light: '#E7E1D8',
+          dark: '#5A5650',
         },
         rust: '#C8451B',
       },

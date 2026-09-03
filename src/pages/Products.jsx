@@ -249,7 +249,7 @@ export default function Products() {
               className={`rounded-full px-5 py-2.5 font-mono text-xs tracking-wide uppercase transition-colors ${
                 active === f
                   ? 'bg-ink text-paper'
-                  : 'bg-white/60 text-steel-dark border border-steel-light hover:border-ink hover:text-ink'
+                  : 'bg-card/60 text-steel-dark border border-steel-light hover:border-ink hover:text-ink'
               }`}
             >
               {f}
@@ -267,7 +267,7 @@ export default function Products() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              className="group rounded-2xl border border-steel-light bg-white/60 overflow-hidden hover:border-orange hover:shadow-lg hover:shadow-orange/5 transition-all duration-300"
+              className="group rounded-2xl border border-steel-light bg-card/60 overflow-hidden hover:border-orange hover:shadow-lg hover:shadow-orange/5 transition-all duration-300"
             >
               <div className="aspect-[3/4] overflow-hidden bg-steel-light/10">
                 <img

@@ -125,7 +125,7 @@ export default function Home() {
         <div className="mt-12 grid sm:grid-cols-2 gap-6">
           {categories.map((cat, i) => (
             <RevealOnScroll key={cat.name} delay={i * 0.08}>
-              <div className="group h-full rounded-2xl border border-steel-light bg-white/60 p-7 hover:border-orange hover:shadow-lg hover:shadow-orange/5 hover:-translate-y-1 transition-all duration-300">
+              <div className="group h-full rounded-2xl border border-steel-light bg-card/60 p-7 hover:border-orange hover:shadow-lg hover:shadow-orange/5 hover:-translate-y-1 transition-all duration-300">
                 <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-rust mb-3">
                   {cat.spec}
                 </p>

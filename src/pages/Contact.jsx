@@ -60,7 +60,7 @@ export default function Contact() {
             {info.map((item) => {
               const Icon = item.icon
               const content = (
-                <div className="h-full rounded-2xl border border-steel-light bg-white/60 p-6 hover:border-orange transition-colors">
+                <div className="h-full rounded-2xl border border-steel-light bg-card/60 p-6 hover:border-orange transition-colors">
                   <Icon size={20} className="text-orange mb-4" />
                   <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-steel mb-1">
                     {item.label}
@@ -76,7 +76,7 @@ export default function Contact() {
             })}
           </div>
 
-          <div className="mt-6 rounded-2xl border border-steel-light bg-white/60 p-6">
+          <div className="mt-6 rounded-2xl border border-steel-light bg-card/60 p-6">
             <a
               href="https://www.facebook.com/J.karesurgical/"
               target="_blank"
@@ -104,7 +104,7 @@ export default function Contact() {
         <RevealOnScroll delay={0.1}>
           <form
             onSubmit={handleSubmit}
-            className="rounded-2xl border border-steel-light bg-white/60 p-8"
+            className="rounded-2xl border border-steel-light bg-card/60 p-8"
           >
             <h2 className="font-display font-semibold text-2xl text-ink mb-6">
               Send an inquiry
@@ -118,7 +118,7 @@ export default function Contact() {
                 <input
                   required
                   type="text"
-                  className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-orange transition-colors"
+                  className="mt-2 w-full rounded-lg border border-steel-light bg-card px-4 py-3 text-sm outline-none focus:border-orange transition-colors"
                   placeholder="Your name"
                 />
               </div>
@@ -129,7 +129,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="tel"
-                    className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-orange transition-colors"
+                    className="mt-2 w-full rounded-lg border border-steel-light bg-card px-4 py-3 text-sm outline-none focus:border-orange transition-colors"
                     placeholder="03xx-xxxxxxx"
                   />
                 </div>
@@ -137,7 +137,7 @@ export default function Contact() {
                   <label className="font-mono text-[10px] tracking-[0.15em] uppercase text-steel">
                     Order type
                   </label>
-                  <select className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-orange transition-colors">
+                  <select className="mt-2 w-full rounded-lg border border-steel-light bg-card px-4 py-3 text-sm outline-none focus:border-orange transition-colors">
                     <option>Retail</option>
                     <option>Wholesale</option>
                     <option>Custom sizing</option>
@@ -151,7 +151,7 @@ export default function Contact() {
                 <textarea
                   required
                   rows={4}
-                  className="mt-2 w-full rounded-lg border border-steel-light bg-white px-4 py-3 text-sm outline-none focus:border-orange transition-colors resize-none"
+                  className="mt-2 w-full rounded-lg border border-steel-light bg-card px-4 py-3 text-sm outline-none focus:border-orange transition-colors resize-none"
                   placeholder="Tell us what you need — product, quantity, sizes..."
                 />
               </div>

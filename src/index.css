@@ -37,7 +37,7 @@ textarea:focus-visible {
     transparent 6px,
     transparent 12px
   );
-  color: #E4E1DC;
+  color: #E7E1D8;
 }
 
 @media (prefers-reduced-motion: reduce) {
