@@ -63,7 +63,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 text-steel-dark text-lg max-w-md"
+            className="mt-6 text-steel-dark text-lg max-w-xl"
           >
             J-Kare Surgical manufactures a diverse range of medical,
             orthopedic and healthcare products for distributors and
@@ -96,7 +96,7 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="animate-floatSlow"
+          className="animate-floatSlow lg:translate-x-6"
         >
           <BraceDiagram />
         </motion.div>
