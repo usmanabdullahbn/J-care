@@ -21,10 +21,7 @@ import ofE2 from '../assets/products/of-e2-elbow-support.jpg'
 import ofA3 from '../assets/products/of-a3-ankle-support.jpg'
 import ofK4 from '../assets/products/of-k4-knee-support.jpg'
 import ofW1 from '../assets/products/of-w1-wrist-support.jpg'
-import plasticBell from '../assets/products/plasticbell-circumcision-device.jpg'
-import goldenBell from '../assets/products/goldenbell-circumcision-device.jpg'
-import gBell from '../assets/products/gbell-circumcision-device.jpg'
-import aeroBell from '../assets/products/aerobell-circumcision-device.jpg'
+import sg01 from '../assets/products/sg01-disposable-surgical-gown.jpg'
 
 const filters = [
   'All',
@@ -33,8 +30,8 @@ const filters = [
   'Knee Supports',
   'Wrist & Hand',
   'Compression Sleeves',
-  'Circumcision Devices',
   'Recovery Aids',
+  'Surgical Wear',
 ]
 
 const products = [
@@ -183,40 +180,13 @@ const products = [
     image: ofW1,
   },
   {
-    code: 'Plastic Bell',
-    name: 'Plastic Bell — Circumcision Device',
-    category: 'Circumcision Devices',
-    material: 'Sterile medical-grade plastic + ligature',
-    sizes: '1.1 / 1.2 / 1.3 / 1.4',
+    code: 'JK-SG01',
+    name: 'Disposable Surgical Gown',
+    category: 'Surgical Wear',
+    material: 'Non-woven SMS fabric, knit cuffs',
+    sizes: 'Free size',
     compression: 'Sterile, single-use',
-    image: plasticBell,
-  },
-  {
-    code: 'Golden Bell',
-    name: 'Golden Bell — Circumcision Device',
-    category: 'Circumcision Devices',
-    material: 'Sterile medical-grade plastic + ligature',
-    sizes: '1.3 cm',
-    compression: 'Sterile, single-use',
-    image: goldenBell,
-  },
-  {
-    code: 'G-Bell',
-    name: 'G-Bell — Circumcision Device',
-    category: 'Circumcision Devices',
-    material: 'Sterile medical-grade plastic + ligature',
-    sizes: '1.2 cm',
-    compression: 'Sterile, single-use',
-    image: gBell,
-  },
-  {
-    code: 'Aero Bell',
-    name: 'Aero Bell — Circumcision Device',
-    category: 'Circumcision Devices',
-    material: 'Sterile medical-grade plastic + ligature',
-    sizes: '1.1 / 1.2 / 1.3 / 1.4 / 1.5 / 1.7',
-    compression: 'Sterile, single-use',
-    image: aeroBell,
+    image: sg01,
   },
 ]
 
