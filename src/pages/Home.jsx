@@ -5,7 +5,7 @@ import PageWrapper from '../components/PageWrapper.jsx'
 import RevealOnScroll from '../components/RevealOnScroll.jsx'
 import StitchDivider from '../components/StitchDivider.jsx'
 import Marquee from '../components/Marquee.jsx'
-import BraceDiagram from '../components/BraceDiagram.jsx'
+import KneeDiagram from '../components/KneeDiagram.jsx'
 
 const categories = [
   {
@@ -98,7 +98,7 @@ export default function Home() {
           transition={{ duration: 0.7, delay: 0.15 }}
           className="animate-floatSlow lg:translate-x-6"
         >
-          <BraceDiagram />
+          <KneeDiagram />
         </motion.div>
       </section>
 

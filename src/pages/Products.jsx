@@ -1,10 +1,12 @@
-import { useState } from 'react'
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
 import PageWrapper from '../components/PageWrapper.jsx'
 import RevealOnScroll from '../components/RevealOnScroll.jsx'
 import StitchDivider from '../components/StitchDivider.jsx'
+import ProductModal from '../components/ProductModal.jsx'
 
+import pb01 from '../assets/products/pb01-plastibell-circumcision-device.jpg'
 import cc01 from '../assets/products/cc01-soft-cervical-collar.jpg'
 import cc02 from '../assets/products/cc02-hard-cervical-collar.jpg'
 import aps01 from '../assets/products/aps01-shoulder-polysling.jpg'
@@ -25,6 +27,7 @@ import sg01 from '../assets/products/sg01-disposable-surgical-gown.jpg'
 
 const filters = [
   'All',
+  'Circumcision Devices',
   'Collars',
   'Back & Waist Belts',
   'Knee Supports',
@@ -35,6 +38,16 @@ const filters = [
 ]
 
 const products = [
+  {
+    code: 'JK-PB01',
+    name: 'PlastiBell Circumcision Device',
+    category: 'Circumcision Devices',
+    material: 'Medical-grade plastic',
+    sizes: '1.1 – 1.9 cm, 9 sizes',
+    compression: 'Sterile, single-use',
+    image: pb01,
+    fit: 'contain',
+  },
   {
     code: 'JK-CC01',
     name: 'Soft Cervical Collar',
@@ -192,9 +205,21 @@ const products = [
 
 export default function Products() {
   const [active, setActive] = useState('All')
+  const [selected, setSelected] = useState(null)
 
   const visible =
     active === 'All' ? products : products.filter((p) => p.category === active)
+
+  useEffect(() => {
+    if (!selected) return
+    const onKeyDown = (e) => e.key === 'Escape' && setSelected(null)
+    document.addEventListener('keydown', onKeyDown)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [selected])
 
   return (
     <PageWrapper>
@@ -237,14 +262,20 @@ export default function Products() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: i * 0.04 }}
-              className="group rounded-2xl border border-steel-light bg-card/60 overflow-hidden hover:border-orange hover:shadow-lg hover:shadow-orange/5 transition-all duration-300"
+              onClick={() => setSelected(p)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && setSelected(p)}
+              className="group cursor-pointer rounded-2xl border border-steel-light bg-card/60 overflow-hidden hover:border-orange hover:shadow-lg hover:shadow-orange/5 transition-all duration-300"
             >
               <div className="aspect-[3/4] overflow-hidden bg-steel-light/10">
                 <img
                   src={p.image}
                   alt={p.name}
                   loading="lazy"
-                  className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-300"
+                  className={`w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ${
+                    p.fit === 'contain' ? 'object-contain p-4' : 'object-cover object-top'
+                  }`}
                 />
               </div>
               <div className="p-6">
@@ -281,6 +312,7 @@ export default function Products() {
                   href="https://wa.me/920000000000"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
                   className="mt-6 inline-flex items-center gap-2 font-mono text-xs tracking-wide uppercase text-orange hover:text-orange-dark transition-colors"
                 >
                   <MessageCircle size={14} />
@@ -297,6 +329,12 @@ export default function Products() {
           </p>
         )}
       </section>
+
+      <AnimatePresence>
+        {selected && (
+          <ProductModal product={selected} onClose={() => setSelected(null)} />
+        )}
+      </AnimatePresence>
     </PageWrapper>
   )
 }
