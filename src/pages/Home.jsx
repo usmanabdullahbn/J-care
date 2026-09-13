@@ -5,7 +5,7 @@ import PageWrapper from '../components/PageWrapper.jsx'
 import RevealOnScroll from '../components/RevealOnScroll.jsx'
 import StitchDivider from '../components/StitchDivider.jsx'
 import Marquee from '../components/Marquee.jsx'
-import KneeDiagram from '../components/KneeDiagram.jsx'
+import KneeDiagram from '../components/BraceDiagram.jsx'
 
 const categories = [
   {
