@@ -27,6 +27,7 @@ import sg01 from '../assets/products/sg01-disposable-surgical-gown.jpg'
 import cc03 from '../assets/products/cc03-philadelphia-collar.jpg'
 import ss01 from '../assets/products/ss01-shoulder-support.jpg'
 import lg01 from '../assets/products/lg01-latex-gloves.jpg'
+import ucc01 from '../assets/products/ucc01-umbilical-cord-clamp.jpg'
 
 const filters = [
   'All',
@@ -37,6 +38,7 @@ const filters = [
   'Wrist & Hand',
   'Compression Sleeves',
   'Recovery Aids',
+  'Newborn Care',
   'Surgical Wear',
 ]
 
@@ -230,6 +232,16 @@ const products = [
     sizes: 'S / M / L / XL',
     compression: 'Sterile, single-use',
     image: lg01,
+  },
+  {
+    code: 'JK-UCC01',
+    name: 'Umbilical Cord Clamp',
+    category: 'Newborn Care',
+    material: 'Medical-grade plastic',
+    sizes: 'One size',
+    compression: 'Sterile, single-use',
+    image: ucc01,
+    fit: 'contain',
   },
 ]
 
