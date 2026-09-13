@@ -24,6 +24,9 @@ import ofA3 from '../assets/products/of-a3-ankle-support.jpg'
 import ofK4 from '../assets/products/of-k4-knee-support.jpg'
 import ofW1 from '../assets/products/of-w1-wrist-support.jpg'
 import sg01 from '../assets/products/sg01-disposable-surgical-gown.jpg'
+import cc03 from '../assets/products/cc03-philadelphia-collar.jpg'
+import ss01 from '../assets/products/ss01-shoulder-support.jpg'
+import lg01 from '../assets/products/lg01-latex-gloves.jpg'
 
 const filters = [
   'All',
@@ -200,6 +203,33 @@ const products = [
     sizes: 'Free size',
     compression: 'Sterile, single-use',
     image: sg01,
+  },
+  {
+    code: 'JK-CC03',
+    name: 'Philadelphia Collar',
+    category: 'Collars',
+    material: 'Rigid two-piece shell, foam lining',
+    sizes: 'S / M / L / XL',
+    compression: 'Rigid support',
+    image: cc03,
+  },
+  {
+    code: 'JK-SS01',
+    name: 'Shoulder Support',
+    category: 'Compression Sleeves',
+    material: 'Elastic knit weave, neoprene pad',
+    sizes: 'One size',
+    compression: 'Light–Moderate',
+    image: ss01,
+  },
+  {
+    code: 'JK-LG01',
+    name: 'Latex Examination Gloves',
+    category: 'Surgical Wear',
+    material: 'Natural latex, powder-free',
+    sizes: 'S / M / L / XL',
+    compression: 'Sterile, single-use',
+    image: lg01,
   },
 ]
 
