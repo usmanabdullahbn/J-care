@@ -3,7 +3,6 @@ import { motion } from 'framer-motion'
 import { Phone, Mail, MapPin, Facebook, Clock, Send } from 'lucide-react'
 import PageWrapper from '../components/PageWrapper.jsx'
 import RevealOnScroll from '../components/RevealOnScroll.jsx'
-import StitchDivider from '../components/StitchDivider.jsx'
 
 const info = [
   {
@@ -89,14 +88,6 @@ export default function Contact() {
                 <span className="block text-sm text-steel-dark">Follow for offers &amp; new stock</span>
               </span>
             </a>
-          </div>
-
-          <StitchDivider className="my-8 text-steel-light" />
-
-          <div className="rounded-2xl overflow-hidden border border-steel-light aspect-[16/10] bg-steel-light/25 flex items-center justify-center">
-            <span className="font-mono text-xs tracking-wide uppercase text-steel-dark text-center px-6">
-              Map placeholder — embed your Google Maps location here
-            </span>
           </div>
         </RevealOnScroll>
 
