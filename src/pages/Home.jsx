@@ -8,7 +8,7 @@ import Marquee from '../components/Marquee.jsx'
 import KneeDiagram from '../components/BraceDiagram.jsx'
 
 import kph01 from '../assets/products/kph01-hinged-knee-brace.jpg'
-import sb02 from '../assets/products/sb02-lumbar-spine-belt.jpg'
+import sb02 from '../assets/products/sb02-lumbar-spine-belt.png'
 import cc02 from '../assets/products/cc02-hard-cervical-collar.jpg'
 import ws02 from '../assets/products/ws02-wrist-splint.jpg'
 

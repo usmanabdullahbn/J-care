@@ -11,7 +11,7 @@ import cc01 from '../assets/products/cc01-soft-cervical-collar.jpg'
 import cc02 from '../assets/products/cc02-hard-cervical-collar.jpg'
 import aps01 from '../assets/products/aps01-shoulder-polysling.jpg'
 import sw01 from '../assets/products/sw01-slim-waist-belt.jpg'
-import sb02 from '../assets/products/sb02-lumbar-spine-belt.jpg'
+import sb02 from '../assets/products/sb02-lumbar-spine-belt.png'
 import sl03 from '../assets/products/sl03-spinal-lumbo-sacral.jpg'
 import kp02 from '../assets/products/kp02-patella-knee-support.jpg'
 import kph01 from '../assets/products/kph01-hinged-knee-brace.jpg'
@@ -27,6 +27,9 @@ import sg01 from '../assets/products/sg01-disposable-surgical-gown.jpg'
 import cc03 from '../assets/products/cc03-philadelphia-collar.jpg'
 import ss01 from '../assets/products/ss01-shoulder-support.jpg'
 import tq01 from '../assets/products/tournquet.jpeg'
+import bd01 from '../assets/products/bd01-abdominal-binder.png'
+import ab02 from '../assets/products/ab02-abdominal-belt.png'
+import ga01 from '../assets/products/ga01-guedel-airways.png'
 
 const filters = [
   'All',
@@ -231,6 +234,34 @@ const products = [
     sizes: 'One size',
     compression: 'Adjustable, high compression',
     image: tq01,
+    fit: 'contain',
+  },
+  {
+    code: 'JK-AB01',
+    name: 'Abdominal Binder',
+    category: 'Back & Waist Belts',
+    material: 'Cotton weave, multi-panel with velcro',
+    sizes: 'S / M / L / XL / XXL',
+    compression: 'Adjustable',
+    image: bd01,
+  },
+  {
+    code: 'JK-AB02',
+    name: 'Abdominal Support Belt',
+    category: 'Back & Waist Belts',
+    material: 'Elastic weave + neoprene panel',
+    sizes: 'S / M / L / XL / XXL',
+    compression: 'Adjustable',
+    image: ab02,
+  },
+  {
+    code: 'JK-GA01',
+    name: 'Guedel Airways',
+    category: 'First Aid',
+    material: 'Medical-grade PVC',
+    sizes: 'Size 00 – 5, 7 sizes',
+    compression: 'Sterile, single-use',
+    image: ga01,
     fit: 'contain',
   },
 ]
