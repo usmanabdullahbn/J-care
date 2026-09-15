@@ -26,8 +26,7 @@ import ofW1 from '../assets/products/of-w1-wrist-support.jpg'
 import sg01 from '../assets/products/sg01-disposable-surgical-gown.jpg'
 import cc03 from '../assets/products/cc03-philadelphia-collar.jpg'
 import ss01 from '../assets/products/ss01-shoulder-support.jpg'
-import lg01 from '../assets/products/lg01-latex-gloves.jpg'
-import ucc01 from '../assets/products/ucc01-umbilical-cord-clamp.jpg'
+import tq01 from '../assets/products/tournquet.jpeg'
 
 const filters = [
   'All',
@@ -38,7 +37,7 @@ const filters = [
   'Wrist & Hand',
   'Compression Sleeves',
   'Recovery Aids',
-  'Newborn Care',
+  'First Aid',
   'Surgical Wear',
 ]
 
@@ -225,22 +224,13 @@ const products = [
     image: ss01,
   },
   {
-    code: 'JK-LG01',
-    name: 'Latex Examination Gloves',
-    category: 'Surgical Wear',
-    material: 'Natural latex, powder-free',
-    sizes: 'S / M / L / XL',
-    compression: 'Sterile, single-use',
-    image: lg01,
-  },
-  {
-    code: 'JK-UCC01',
-    name: 'Umbilical Cord Clamp',
-    category: 'Newborn Care',
-    material: 'Medical-grade plastic',
+    code: 'JK-TQ01',
+    name: 'Buckle Quick Release Tourniquet',
+    category: 'First Aid',
+    material: 'Woven elastic strap, quick-release buckle',
     sizes: 'One size',
-    compression: 'Sterile, single-use',
-    image: ucc01,
+    compression: 'Adjustable, high compression',
+    image: tq01,
     fit: 'contain',
   },
 ]
@@ -370,6 +360,27 @@ export default function Products() {
             No products in this category yet.
           </p>
         )}
+
+        <RevealOnScroll>
+          <div className="mt-16 rounded-2xl border border-orange/30 bg-orange/5 px-6 py-8 sm:px-10 sm:py-10 text-center">
+            <p className="font-display font-semibold text-xl sm:text-2xl text-ink">
+              Our product range is not limited to the products shown above.
+            </p>
+            <p className="mt-3 text-steel-dark">
+              Have a specific product requirement? Send us a message and
+              we&apos;ll be happy to discuss it with you.
+            </p>
+            <a
+              href="https://wa.me/920000000000"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 font-mono text-xs tracking-wide uppercase text-orange hover:text-orange-dark transition-colors"
+            >
+              <MessageCircle size={14} />
+              Message us
+            </a>
+          </div>
+        </RevealOnScroll>
       </section>
 
       <AnimatePresence>
