@@ -7,6 +7,11 @@ import StitchDivider from '../components/StitchDivider.jsx'
 import Marquee from '../components/Marquee.jsx'
 import KneeDiagram from '../components/BraceDiagram.jsx'
 
+import kph01 from '../assets/products/kph01-hinged-knee-brace.jpg'
+import sb02 from '../assets/products/sb02-lumbar-spine-belt.jpg'
+import cc02 from '../assets/products/cc02-hard-cervical-collar.jpg'
+import ws02 from '../assets/products/ws02-wrist-splint.jpg'
+
 const categories = [
   {
     name: 'Knee Braces',
@@ -27,6 +32,33 @@ const categories = [
     name: 'Ankle & Wrist Supports',
     spec: 'Breathable elastic weave',
     desc: 'Sprain protection and stabilization for active recovery.',
+  },
+]
+
+const popularProducts = [
+  {
+    code: 'JK-KPH01',
+    name: 'Patella Assisted Hinged Knee Brace',
+    category: 'Knee Supports',
+    image: kph01,
+  },
+  {
+    code: 'JK-B-SB02',
+    name: 'Ultra Lumbar Spine Back Support Belt',
+    category: 'Back & Waist Belts',
+    image: sb02,
+  },
+  {
+    code: 'JK-CC02',
+    name: 'Economy Hard Cervical Collar',
+    category: 'Collars',
+    image: cc02,
+  },
+  {
+    code: 'JK-WS02',
+    name: 'Professional Neoprene Wrist Splint',
+    category: 'Wrist & Hand',
+    image: ws02,
   },
 ]
 
@@ -184,21 +216,51 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA BANNER */}
-      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
-        <RevealOnScroll className="rounded-3xl bg-orange/5 border border-orange/20 px-8 sm:px-14 py-14 text-center">
-          <p className="eyebrow mb-4">Ordering in bulk?</p>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-2xl mx-auto">
-            Get factory-direct pricing on braces, belts and supports.
-          </h2>
+      {/* POPULAR PRODUCTS */}
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-24">
+        <RevealOnScroll className="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div>
+            <p className="eyebrow mb-3">Popular products</p>
+            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-xl">
+              Our most-ordered braces, belts and supports.
+            </h2>
+          </div>
           <NavLink
-            to="/contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-orange px-7 py-3.5 font-mono text-xs tracking-wide uppercase text-paper hover:bg-orange-dark transition-colors"
+            to="/products"
+            className="group inline-flex items-center gap-2 font-mono text-xs tracking-wide uppercase text-orange hover:text-orange-dark transition-colors"
           >
-            Talk to us
-            <ArrowRight size={15} />
+            See more
+            <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
           </NavLink>
         </RevealOnScroll>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {popularProducts.map((p, i) => (
+            <RevealOnScroll key={p.code} delay={i * 0.08}>
+              <NavLink
+                to="/products"
+                className="group block h-full rounded-2xl border border-steel-light bg-card/60 overflow-hidden hover:border-orange hover:shadow-lg hover:shadow-orange/5 transition-all duration-300"
+              >
+                <div className="aspect-[3/4] overflow-hidden bg-steel-light/10">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-5">
+                  <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-rust mb-2">
+                    {p.category}
+                  </p>
+                  <h3 className="font-display font-semibold text-base text-ink leading-snug">
+                    {p.name}
+                  </h3>
+                </div>
+              </NavLink>
+            </RevealOnScroll>
+          ))}
+        </div>
       </section>
     </PageWrapper>
   )
