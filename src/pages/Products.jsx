@@ -30,7 +30,6 @@ import tq01 from '../assets/products/tournquet.jpeg'
 import bd01 from '../assets/products/bd01-abdominal-binder.png'
 import ab02 from '../assets/products/ab02-abdominal-belt.png'
 import ga01 from '../assets/products/ga01-guedel-airways.png'
-import sb03 from '../assets/products/sb03-ultra-lumbar-back-spine-support.png'
 
 const filters = [
   'All',
@@ -264,15 +263,6 @@ const products = [
     compression: 'Sterile, single-use',
     image: ga01,
     fit: 'contain',
-  },
-  {
-    code: 'JK-B-SB03',
-    name: 'Ultra Lumbar Back Spine Support',
-    category: 'Back & Waist Belts',
-    material: 'Neoprene + cushion pads',
-    sizes: 'S / M / L / XL / XXL',
-    compression: 'Firm',
-    image: sb03,
   },
 ]
 
