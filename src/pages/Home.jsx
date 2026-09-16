@@ -7,10 +7,10 @@ import StitchDivider from '../components/StitchDivider.jsx'
 import Marquee from '../components/Marquee.jsx'
 import KneeDiagram from '../components/BraceDiagram.jsx'
 
-import kph01 from '../assets/products/kph01-hinged-knee-brace.jpg'
+import pb01 from '../assets/products/pb01-plastibell-circumcision-device.jpg'
 import sb02 from '../assets/products/sb02-lumbar-spine-belt.png'
 import cc02 from '../assets/products/cc02-hard-cervical-collar.jpg'
-import ws02 from '../assets/products/ws02-wrist-splint.jpg'
+import aps01 from '../assets/products/aps01-shoulder-polysling.jpg'
 
 const categories = [
   {
@@ -37,10 +37,11 @@ const categories = [
 
 const popularProducts = [
   {
-    code: 'JK-KPH01',
-    name: 'Patella Assisted Hinged Knee Brace',
-    category: 'Knee Supports',
-    image: kph01,
+    code: 'JK-PB01',
+    name: 'PlastiBell Circumcision Device',
+    category: 'Circumcision Devices',
+    image: pb01,
+    fit: 'contain',
   },
   {
     code: 'JK-B-SB02',
@@ -55,10 +56,10 @@ const popularProducts = [
     image: cc02,
   },
   {
-    code: 'JK-WS02',
-    name: 'Professional Neoprene Wrist Splint',
-    category: 'Wrist & Hand',
-    image: ws02,
+    code: 'JK-APS01',
+    name: 'Advance Polysling — Shoulder Immobiliser',
+    category: 'Back & Waist Belts',
+    image: aps01,
   },
 ]
 
@@ -220,7 +221,7 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 lg:px-8 pt-24 pb-24">
         <RevealOnScroll className="flex flex-wrap items-end justify-between gap-6 mb-12">
           <div>
-            <p className="eyebrow mb-3">Popular products</p>
+            <p className="eyebrow mb-3">Explore our catalog</p>
             <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-xl">
               Our most-ordered braces, belts and supports.
             </h2>
@@ -246,7 +247,9 @@ export default function Home() {
                     src={p.image}
                     alt={p.name}
                     loading="lazy"
-                    className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-300"
+                    className={`w-full h-full group-hover:scale-[1.03] transition-transform duration-300 ${
+                      p.fit === 'contain' ? 'object-contain p-4' : 'object-cover object-top'
+                    }`}
                   />
                 </div>
                 <div className="p-5">
