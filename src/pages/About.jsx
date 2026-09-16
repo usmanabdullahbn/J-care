@@ -57,6 +57,30 @@ export default function About() {
 
       <StitchDivider className="max-w-6xl mx-auto px-6 lg:px-8 text-steel-light" />
 
+
+      {/* VALUES */}
+      <section className="bg-ink text-paper">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
+          <RevealOnScroll>
+            <p className="eyebrow text-orange-light mb-3">What guides us</p>
+            <h2 className="font-display font-semibold text-3xl sm:text-4xl max-w-xl">
+              A small factory's priorities, stated plainly.
+            </h2>
+          </RevealOnScroll>
+
+          <div className="mt-14 grid md:grid-cols-3 gap-10">
+            {values.map((v, i) => (
+              <RevealOnScroll key={v.title} delay={i * 0.1}>
+                <h3 className="font-display font-semibold text-xl mb-3 text-paper">
+                  {v.title}
+                </h3>
+                <p className="text-steel-light text-[15px] leading-relaxed">{v.body}</p>
+              </RevealOnScroll>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS TIMELINE — genuinely ordered, so numbering earns its place here */}
       <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
         <RevealOnScroll>
@@ -90,28 +114,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* VALUES */}
-      <section className="bg-ink text-paper">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
-          <RevealOnScroll>
-            <p className="eyebrow text-orange-light mb-3">What guides us</p>
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl max-w-xl">
-              A small factory's priorities, stated plainly.
-            </h2>
-          </RevealOnScroll>
-
-          <div className="mt-14 grid md:grid-cols-3 gap-10">
-            {values.map((v, i) => (
-              <RevealOnScroll key={v.title} delay={i * 0.1}>
-                <h3 className="font-display font-semibold text-xl mb-3 text-paper">
-                  {v.title}
-                </h3>
-                <p className="text-steel-light text-[15px] leading-relaxed">{v.body}</p>
-              </RevealOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FACILITY NOTE / PLACEHOLDER IMAGERY STRIP */}
       <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24">

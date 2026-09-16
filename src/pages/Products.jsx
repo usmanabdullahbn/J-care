@@ -16,7 +16,6 @@ import sl03 from '../assets/products/sl03-spinal-lumbo-sacral.jpg'
 import kp02 from '../assets/products/kp02-patella-knee-support.jpg'
 import kph01 from '../assets/products/kph01-hinged-knee-brace.jpg'
 import ts01 from '../assets/products/ts01-thumb-spica-splint.jpg'
-import ws02 from '../assets/products/ws02-wrist-splint.jpg'
 import ps01 from '../assets/products/ps01-posture-support.jpg'
 import hc01 from '../assets/products/hc01-hot-cold-gel-pack.jpg'
 import ofE2 from '../assets/products/of-e2-elbow-support.jpg'
@@ -33,28 +32,16 @@ import ga01 from '../assets/products/ga01-guedel-airways.png'
 
 const filters = [
   'All',
-  'Circumcision Devices',
   'Collars',
   'Back & Waist Belts',
   'Knee Supports',
   'Wrist & Hand',
-  'Compression Sleeves',
   'Recovery Aids',
-  'First Aid',
+  'Medical Devices',
   'Surgical Wear',
 ]
 
 const products = [
-  {
-    code: 'JK-PB01',
-    name: 'PlastiBell Circumcision Device',
-    category: 'Circumcision Devices',
-    material: 'Medical-grade plastic',
-    sizes: '1.1 – 1.9 cm, 9 sizes',
-    compression: 'Sterile, single-use',
-    image: pb01,
-    fit: 'contain',
-  },
   {
     code: 'JK-CC01',
     name: 'Soft Cervical Collar',
@@ -164,6 +151,24 @@ const products = [
     image: kph01,
   },
   {
+    code: 'JK-OF-K4',
+    name: 'Ortho Fast Knee Support',
+    category: 'Knee Supports',
+    material: 'Elastic knit weave',
+    sizes: 'One size',
+    compression: 'Light–Moderate',
+    image: ofK4,
+  },
+  {
+    code: 'JK-OF-A3',
+    name: 'Ortho Fast Ankle Support',
+    category: 'Knee Supports',
+    material: 'Elastic knit weave',
+    sizes: 'One size',
+    compression: 'Light–Moderate',
+    image: ofA3,
+  },
+  {
     code: 'JK-TS01',
     name: 'Thumb Spica Splint',
     category: 'Wrist & Hand',
@@ -173,54 +178,27 @@ const products = [
     image: ts01,
   },
   {
-    code: 'JK-WS02',
-    name: 'Professional Neoprene Wrist Splint',
-    category: 'Wrist & Hand',
-    material: 'Neoprene, dual stabilizers',
-    sizes: 'S / M / L / XL / XXL',
-    compression: 'Firm',
-    image: ws02,
-  },
-  {
-    code: 'JK-OF-E2',
-    name: 'Ortho Fast Elbow Support',
-    category: 'Compression Sleeves',
-    material: 'Elastic knit weave',
-    sizes: 'One size',
-    compression: 'Light–Moderate',
-    image: ofE2,
-  },
-  {
-    code: 'JK-OF-A3',
-    name: 'Ortho Fast Ankle Support',
-    category: 'Compression Sleeves',
-    material: 'Elastic knit weave',
-    sizes: 'One size',
-    compression: 'Light–Moderate',
-    image: ofA3,
-  },
-  {
-    code: 'JK-OF-K4',
-    name: 'Ortho Fast Knee Support',
-    category: 'Compression Sleeves',
-    material: 'Elastic knit weave',
-    sizes: 'One size',
-    compression: 'Light–Moderate',
-    image: ofK4,
-  },
-  {
     code: 'JK-OF-W1',
     name: 'Ortho Fast Wrist Support',
-    category: 'Compression Sleeves',
+    category: 'Wrist & Hand',
     material: 'Elastic knit weave',
     sizes: 'One size',
     compression: 'Light–Moderate',
     image: ofW1,
   },
   {
+    code: 'JK-OF-E2',
+    name: 'Ortho Fast Elbow Support',
+    category: 'Wrist & Hand',
+    material: 'Elastic knit weave',
+    sizes: 'One size',
+    compression: 'Light–Moderate',
+    image: ofE2,
+  },
+  {
     code: 'JK-SS01',
     name: 'Shoulder Support',
-    category: 'Compression Sleeves',
+    category: 'Wrist & Hand',
     material: 'Elastic knit weave, neoprene pad',
     sizes: 'One size',
     compression: 'Light–Moderate',
@@ -236,9 +214,19 @@ const products = [
     image: hc01,
   },
   {
+    code: 'JK-PB01',
+    name: 'PlastiBell Circumcision Device',
+    category: 'Medical Devices',
+    material: 'Medical-grade plastic',
+    sizes: '1.1 – 1.9 cm, 9 sizes',
+    compression: 'Sterile, single-use',
+    image: pb01,
+    fit: 'contain',
+  },
+  {
     code: 'JK-TQ01',
     name: 'Buckle Quick Release Tourniquet',
-    category: 'First Aid',
+    category: 'Medical Devices',
     material: 'Woven elastic strap, quick-release buckle',
     sizes: 'One size',
     compression: 'Adjustable, high compression',
@@ -248,7 +236,7 @@ const products = [
   {
     code: 'JK-GA01',
     name: 'Guedel Airways',
-    category: 'First Aid',
+    category: 'Medical Devices',
     material: 'Medical-grade PVC',
     sizes: 'Size 00 – 5, 7 sizes',
     compression: 'Sterile, single-use',
