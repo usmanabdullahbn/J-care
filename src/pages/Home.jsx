@@ -1,9 +1,21 @@
 import { NavLink } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowRight, ShieldCheck, Factory, Globe, Boxes } from 'lucide-react'
+import {
+  ArrowRight,
+  ShieldCheck,
+  Factory,
+  Globe,
+  Boxes,
+  Stethoscope,
+  Bone,
+  Footprints,
+  Hand,
+  Thermometer,
+  Syringe,
+  Shirt,
+} from 'lucide-react'
 import PageWrapper from '../components/PageWrapper.jsx'
 import RevealOnScroll from '../components/RevealOnScroll.jsx'
-import StitchDivider from '../components/StitchDivider.jsx'
 import Marquee from '../components/Marquee.jsx'
 import KneeDiagram from '../components/BraceDiagram.jsx'
 
@@ -13,26 +25,13 @@ import cc02 from '../assets/products/cc02-hard-cervical-collar.jpg'
 import aps01 from '../assets/products/aps01-shoulder-polysling.jpg'
 
 const categories = [
-  {
-    name: 'Knee Braces',
-    spec: 'Hinged & compression-fit',
-    desc: 'Support for ligament recovery, arthritis and daily joint strain.',
-  },
-  {
-    name: 'Back & Lumbar Belts',
-    spec: 'Adjustable compression',
-    desc: 'Posture correction and lower-back support for work and recovery.',
-  },
-  {
-    name: 'Cervical Collars',
-    spec: 'Foam & rigid options',
-    desc: 'Neck immobilization for post-injury and post-operative care.',
-  },
-  {
-    name: 'Ankle & Wrist Supports',
-    spec: 'Breathable elastic weave',
-    desc: 'Sprain protection and stabilization for active recovery.',
-  },
+  { icon: Stethoscope, name: 'Cervical Collars' },
+  { icon: Bone, name: 'Back & Waist Belts' },
+  { icon: Footprints, name: 'Knee Supports' },
+  { icon: Hand, name: 'Wrist & Hand Supports' },
+  { icon: Thermometer, name: 'Recovery Aids' },
+  { icon: Syringe, name: 'Medical Devices' },
+  { icon: Shirt, name: 'Surgical Wear' },
 ]
 
 const popularProducts = [
@@ -146,30 +145,35 @@ export default function Home() {
         ]}
       />
 
-      {/* CATEGORY GRID */}
+      {/* CATEGORY STRIP */}
       <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
-        <RevealOnScroll>
-          <p className="eyebrow mb-3">What we make</p>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-xl">
-            A focused range, built for daily wear and real recovery.
-          </h2>
+        <RevealOnScroll className="flex flex-wrap items-end justify-between gap-6 mb-12">
+          <div>
+            <p className="eyebrow mb-3">What we make</p>
+            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-xl">
+              One catalog, every category covered.
+            </h2>
+            <p className="mt-4 text-steel-dark max-w-xl">
+              From orthopedic braces to surgical wear and medical devices —
+              manufactured in-house, ready for retail or wholesale.
+            </p>
+          </div>
         </RevealOnScroll>
 
-        <div className="mt-12 grid sm:grid-cols-2 gap-6">
-          {categories.map((cat, i) => (
-            <RevealOnScroll key={cat.name} delay={i * 0.08}>
-              <div className="group h-full rounded-2xl border border-steel-light bg-card/60 p-7 hover:border-orange hover:shadow-lg hover:shadow-orange/5 hover:-translate-y-1 transition-all duration-300">
-                <p className="font-mono text-[10px] tracking-[0.15em] uppercase text-rust mb-3">
-                  {cat.spec}
-                </p>
-                <h3 className="font-display font-semibold text-xl text-ink mb-2">
-                  {cat.name}
-                </h3>
-                <p className="text-sm text-steel-dark leading-relaxed">{cat.desc}</p>
-                <StitchDivider className="mt-6 mb-0 text-steel-light group-hover:text-orange-light transition-colors" />
-              </div>
-            </RevealOnScroll>
-          ))}
+        <div className="flex flex-wrap gap-4">
+          {categories.map((cat, i) => {
+            const Icon = cat.icon
+            return (
+              <RevealOnScroll key={cat.name} delay={i * 0.05}>
+                <div className="group flex items-center gap-3 rounded-full border border-steel-light bg-card/60 pl-4 pr-5 py-3 hover:border-orange hover:shadow-md hover:shadow-orange/5 transition-all duration-300">
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange/10 text-orange shrink-0">
+                    <Icon size={16} />
+                  </span>
+                  <span className="text-sm font-medium text-ink">{cat.name}</span>
+                </div>
+              </RevealOnScroll>
+            )
+          })}
         </div>
       </section>
 
