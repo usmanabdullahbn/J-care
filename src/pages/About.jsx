@@ -1,39 +1,44 @@
-import { motion } from 'framer-motion'
+import {
+  Stethoscope,
+  Bone,
+  Footprints,
+  Hand,
+  Thermometer,
+  Syringe,
+  Shirt,
+  ShieldCheck,
+  Truck,
+  TrendingUp,
+} from 'lucide-react'
 import PageWrapper from '../components/PageWrapper.jsx'
 import RevealOnScroll from '../components/RevealOnScroll.jsx'
 import StitchDivider from '../components/StitchDivider.jsx'
 
-const process = [
-  {
-    step: 'Cutting',
-    detail: 'Neoprene, cotton and elastic panels are cut to pattern from raw rolls of material.',
-  },
-  {
-    step: 'Stitching',
-    detail: 'Reinforced double seams and strap points are stitched in-house, not outsourced.',
-  },
-  {
-    step: 'Quality Check',
-    detail: 'Every batch is checked for stitch strength, compression and size accuracy.',
-  },
-  {
-    step: 'Packaging & Dispatch',
-    detail: 'Sorted by size and order, then packed for retail counters or bulk shipment.',
-  },
+const whatWeDo = [
+  { icon: Stethoscope, label: 'Cervical Collars' },
+  { icon: Bone, label: 'Back & Waist Belts' },
+  { icon: Footprints, label: 'Knee Supports' },
+  { icon: Hand, label: 'Wrist & Hand Supports' },
+  { icon: Thermometer, label: 'Recovery Aids' },
+  { icon: Syringe, label: 'Medical Devices' },
+  { icon: Shirt, label: 'Surgical Wear' },
 ]
 
-const values = [
+const approach = [
   {
-    title: 'Manufacturer first',
-    body: 'We build the products we sell. That means fewer middlemen, tighter quality control, and pricing that holds up at wholesale volume.',
+    icon: ShieldCheck,
+    title: 'Consistent Quality',
+    body: 'Every product is designed, stitched and quality-checked in-house at our own facility.',
   },
   {
-    title: 'Retail & wholesale',
-    body: 'Walk-in customers get the same product quality as our bulk buyers — hospitals, pharmacies and medical stores across Pakistan.',
+    icon: Truck,
+    title: 'Reliable Supply',
+    body: 'Dependable delivery at any order size — from a single retail counter to a wholesale pallet.',
   },
   {
-    title: 'Built for daily wear',
-    body: 'Braces and belts are only useful if people actually wear them. We fit, stitch and finish for comfort over long hours, not just a shelf photo.',
+    icon: TrendingUp,
+    title: 'Continued Growth',
+    body: 'Expanding steadily, locally and internationally, without losing sight of quality.',
   },
 ]
 
@@ -42,78 +47,92 @@ export default function About() {
     <PageWrapper>
       <section className="max-w-6xl mx-auto px-6 lg:px-8 pt-16 pb-16">
         <RevealOnScroll>
-          <p className="eyebrow mb-4">Manufacturing</p>
+          <p className="eyebrow mb-4">Who we are</p>
           <h1 className="font-display font-semibold text-4xl sm:text-5xl text-ink max-w-2xl leading-[1.1]">
-            From raw material to retail shelf — under one roof.
+            About J-Kare
           </h1>
           <p className="mt-6 text-steel-dark text-lg max-w-2xl">
-            J-Kare Surgical Store isn't just a counter you buy from — it's a
-            small manufacturing floor in Karachi where orthopedic supports
-            are cut, stitched and checked before they ever reach a customer
-            or a wholesale order.
+            J-Kare Surgical is a Karachi-based manufacturer of medical,
+            orthopedic, and surgical products, supplying distributors,
+            pharmacies, medical stores, and hospitals across Pakistan — with
+            a growing export presence in African markets including Nigeria
+            and Tanzania.
           </p>
         </RevealOnScroll>
       </section>
 
       <StitchDivider className="max-w-6xl mx-auto px-6 lg:px-8 text-steel-light" />
 
+      {/* WHAT WE DO */}
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14">
+        <RevealOnScroll>
+          <p className="eyebrow mb-3">What We Do</p>
+          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-md">
+            A focused range, manufactured under one roof.
+          </h2>
+          <p className="mt-5 text-steel-dark leading-relaxed max-w-md">
+            We supply a wide range of medical and orthopedic products
+            tailored to the demanding environments of modern healthcare
+            facilities, including:
+          </p>
 
-      {/* VALUES */}
-      <section className="bg-ink text-paper">
+          <div className="mt-8 rounded-2xl bg-ink text-paper px-6 py-6 flex items-start gap-4">
+            <ShieldCheck size={22} className="text-orange-light shrink-0 mt-0.5" />
+            <p className="text-sm text-steel-light leading-relaxed">
+              We're a manufacturer first. Every product — from orthopedic
+              braces and support belts to circumcision devices, surgical
+              gowns, and first aid supplies — is designed, stitched, and
+              quality-checked in-house at our own facility.
+            </p>
+          </div>
+        </RevealOnScroll>
+
+        <div className="grid sm:grid-cols-2 gap-4 content-start">
+          {whatWeDo.map((item, i) => {
+            const Icon = item.icon
+            return (
+              <RevealOnScroll key={item.label} delay={i * 0.06}>
+                <div className="flex items-center gap-3 rounded-xl border border-steel-light bg-card/60 px-5 py-4 hover:border-orange transition-colors">
+                  <Icon size={18} className="text-orange shrink-0" />
+                  <span className="text-sm font-medium text-ink">{item.label}</span>
+                </div>
+              </RevealOnScroll>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* OUR APPROACH */}
+      <section className="bg-card/60 border-y border-steel-light">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
           <RevealOnScroll>
-            <p className="eyebrow text-orange-light mb-3">What guides us</p>
-            <h2 className="font-display font-semibold text-3xl sm:text-4xl max-w-xl">
-              A small factory's priorities, stated plainly.
+            <p className="eyebrow mb-3">Our Approach</p>
+            <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-xl">
+              What we aim for.
             </h2>
+            <p className="mt-5 text-steel-dark leading-relaxed max-w-xl">
+              Consistent quality across every product, reliable supply at
+              any order size, and continued growth — locally and
+              internationally.
+            </p>
           </RevealOnScroll>
 
           <div className="mt-14 grid md:grid-cols-3 gap-10">
-            {values.map((v, i) => (
-              <RevealOnScroll key={v.title} delay={i * 0.1}>
-                <h3 className="font-display font-semibold text-xl mb-3 text-paper">
-                  {v.title}
-                </h3>
-                <p className="text-steel-light text-[15px] leading-relaxed">{v.body}</p>
-              </RevealOnScroll>
-            ))}
+            {approach.map((a, i) => {
+              const Icon = a.icon
+              return (
+                <RevealOnScroll key={a.title} delay={i * 0.1}>
+                  <Icon size={22} className="text-orange mb-4" />
+                  <h3 className="font-display font-semibold text-xl mb-2 text-ink">
+                    {a.title}
+                  </h3>
+                  <p className="text-steel-dark text-[15px] leading-relaxed">{a.body}</p>
+                </RevealOnScroll>
+              )
+            })}
           </div>
         </div>
       </section>
-
-      {/* PROCESS TIMELINE — genuinely ordered, so numbering earns its place here */}
-      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
-        <RevealOnScroll>
-          <p className="eyebrow mb-3">The process</p>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-xl">
-            Four stages, every single batch.
-          </h2>
-        </RevealOnScroll>
-
-        <div className="mt-14 relative">
-          <div className="hidden md:block absolute top-6 left-0 right-0 h-px bg-steel-light" />
-          <div className="grid md:grid-cols-4 gap-10 md:gap-6">
-            {process.map((p, i) => (
-              <RevealOnScroll key={p.step} delay={i * 0.12} className="relative">
-                <div className="flex md:flex-col items-start md:items-start gap-4 md:gap-6">
-                  <div className="relative z-10 w-12 h-12 shrink-0 rounded-full bg-ink text-paper flex items-center justify-center font-mono text-sm">
-                    {String(i + 1).padStart(2, '0')}
-                  </div>
-                  <div>
-                    <h3 className="font-display font-semibold text-lg text-ink mb-1.5">
-                      {p.step}
-                    </h3>
-                    <p className="text-sm text-steel-dark leading-relaxed max-w-[220px]">
-                      {p.detail}
-                    </p>
-                  </div>
-                </div>
-              </RevealOnScroll>
-            ))}
-          </div>
-        </div>
-      </section>
-
 
       {/* FACILITY NOTE / PLACEHOLDER IMAGERY STRIP */}
       <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
