@@ -25,7 +25,7 @@ export default function Footer() {
           <p className="eyebrow text-orange-light mb-4">Navigate</p>
           <ul className="space-y-2 text-sm">
             <li><NavLink to="/" className="hover:text-orange-light transition-colors">Home</NavLink></li>
-            <li><NavLink to="/about" className="hover:text-orange-light transition-colors">Manufacturing</NavLink></li>
+            <li><NavLink to="/about" className="hover:text-orange-light transition-colors">About</NavLink></li>
             <li><NavLink to="/products" className="hover:text-orange-light transition-colors">Products</NavLink></li>
             <li><NavLink to="/contact" className="hover:text-orange-light transition-colors">Contact</NavLink></li>
           </ul>
