@@ -15,7 +15,14 @@ function ScrollToTop() {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual'
     }
+    // bypass the global `scroll-behavior: smooth` so this jump is instant —
+    // otherwise the animated scroll gets cut short by the route's own
+    // enter/exit transition and the new page never quite reaches the top
+    const root = document.documentElement
+    const prevBehavior = root.style.scrollBehavior
+    root.style.scrollBehavior = 'auto'
     window.scrollTo(0, 0)
+    root.style.scrollBehavior = prevBehavior
   }, [pathname, search])
 
   return null
