@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
 import PageWrapper from '../components/PageWrapper.jsx'
@@ -255,8 +256,21 @@ const products = [
 ]
 
 export default function Products() {
-  const [active, setActive] = useState('All')
+  const [searchParams, setSearchParams] = useSearchParams()
+  const categoryParam = searchParams.get('category')
+  const [active, setActive] = useState(
+    filters.includes(categoryParam) ? categoryParam : 'All'
+  )
   const [selected, setSelected] = useState(null)
+
+  useEffect(() => {
+    setActive(filters.includes(categoryParam) ? categoryParam : 'All')
+  }, [categoryParam])
+
+  const handleFilter = (f) => {
+    setActive(f)
+    setSearchParams(f === 'All' ? {} : { category: f })
+  }
 
   const visible =
     active === 'All' ? products : products.filter((p) => p.category === active)
@@ -291,7 +305,7 @@ export default function Products() {
           {filters.map((f) => (
             <button
               key={f}
-              onClick={() => setActive(f)}
+              onClick={() => handleFilter(f)}
               className={`rounded-full px-5 py-2.5 font-mono text-xs tracking-wide uppercase transition-colors ${
                 active === f
                   ? 'bg-ink text-paper'

@@ -25,13 +25,13 @@ import cc02 from '../assets/products/cc02-hard-cervical-collar.jpg'
 import aps01 from '../assets/products/aps01-shoulder-polysling.jpg'
 
 const categories = [
-  { icon: Stethoscope, name: 'Cervical Collars' },
-  { icon: Bone, name: 'Back & Waist Belts' },
-  { icon: Footprints, name: 'Knee Supports' },
-  { icon: Hand, name: 'Wrist & Hand Supports' },
-  { icon: Thermometer, name: 'Recovery Aids' },
-  { icon: Syringe, name: 'Medical Devices' },
-  { icon: Shirt, name: 'Surgical Wear' },
+  { icon: Stethoscope, name: 'Cervical Collars', filter: 'Collars' },
+  { icon: Bone, name: 'Back & Waist Belts', filter: 'Back & Waist Belts' },
+  { icon: Footprints, name: 'Knee Supports', filter: 'Knee Supports' },
+  { icon: Hand, name: 'Wrist & Hand Supports', filter: 'Wrist & Hand' },
+  { icon: Thermometer, name: 'Recovery Aids', filter: 'Recovery Aids' },
+  { icon: Syringe, name: 'Medical Devices', filter: 'Medical Devices' },
+  { icon: Shirt, name: 'Surgical Wear', filter: 'Surgical Wear' },
 ]
 
 const popularProducts = [
@@ -165,12 +165,15 @@ export default function Home() {
             const Icon = cat.icon
             return (
               <RevealOnScroll key={cat.name} delay={i * 0.05}>
-                <div className="group flex items-center gap-3 rounded-full border border-steel-light bg-card/60 pl-4 pr-5 py-3 hover:border-orange hover:shadow-md hover:shadow-orange/5 transition-all duration-300">
+                <NavLink
+                  to={`/products?category=${encodeURIComponent(cat.filter)}`}
+                  className="group flex items-center gap-3 rounded-full border border-steel-light bg-card/60 pl-4 pr-5 py-3 hover:border-orange hover:shadow-md hover:shadow-orange/5 transition-all duration-300"
+                >
                   <span className="flex items-center justify-center w-8 h-8 rounded-full bg-orange/10 text-orange shrink-0">
                     <Icon size={16} />
                   </span>
                   <span className="text-sm font-medium text-ink">{cat.name}</span>
-                </div>
+                </NavLink>
               </RevealOnScroll>
             )
           })}
