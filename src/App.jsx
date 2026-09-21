@@ -9,11 +9,11 @@ import Products from './pages/Products.jsx'
 import Contact from './pages/Contact.jsx'
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
+  const { pathname, search } = useLocation()
 
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [pathname])
+  }, [pathname, search])
 
   return null
 }
