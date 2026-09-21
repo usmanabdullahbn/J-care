@@ -64,46 +64,48 @@ export default function About() {
       <StitchDivider className="max-w-6xl mx-auto px-6 lg:px-8 text-steel-light" />
 
       {/* WHAT WE DO */}
-      <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14">
-        <RevealOnScroll>
-          <p className="eyebrow mb-3">What We Do</p>
-          <h2 className="font-display font-semibold text-3xl sm:text-4xl text-ink max-w-md">
-            A focused range, manufactured under one roof.
-          </h2>
-          <p className="mt-5 text-steel-dark leading-relaxed max-w-md">
-            We supply a wide range of medical and soft orthopedic products
-            tailored to the demanding environments of modern healthcare
-            facilities, including:
-          </p>
-
-          <div className="mt-8 rounded-2xl bg-ink text-paper px-6 py-6 flex items-start gap-4">
-            <ShieldCheck size={22} className="text-orange-light shrink-0 mt-0.5" />
-            <p className="text-sm text-steel-light leading-relaxed">
-              We're a manufacturer first. Every product — from soft orthopedic
-              braces and support belts to circumcision devices, surgical
-              gowns, and first aid supplies — is designed, stitched, and
-              quality-checked in-house at our own facility.
+      <section className="bg-ink text-paper">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-14">
+          <RevealOnScroll>
+            <p className="eyebrow mb-3 text-orange-light">What We Do</p>
+            <h2 className="font-display font-semibold text-3xl sm:text-4xl max-w-md">
+              A focused range, manufactured under one roof.
+            </h2>
+            <p className="mt-5 text-steel-light leading-relaxed max-w-md">
+              We supply a wide range of medical and soft orthopedic products
+              tailored to the demanding environments of modern healthcare
+              facilities, including:
             </p>
-          </div>
-        </RevealOnScroll>
 
-        <div className="grid sm:grid-cols-2 gap-4 content-start">
-          {whatWeDo.map((item, i) => {
-            const Icon = item.icon
-            return (
-              <RevealOnScroll key={item.label} delay={i * 0.06}>
-                <div className="flex items-center gap-3 rounded-xl border border-steel-light bg-card/60 px-5 py-4 hover:border-orange transition-colors">
-                  <Icon size={18} className="text-orange shrink-0" />
-                  <span className="text-sm font-medium text-ink">{item.label}</span>
-                </div>
-              </RevealOnScroll>
-            )
-          })}
+            <div className="mt-8 rounded-2xl border border-orange/30 bg-orange/10 px-6 py-6 flex items-start gap-4">
+              <ShieldCheck size={22} className="text-orange-light shrink-0 mt-0.5" />
+              <p className="text-sm text-steel-light leading-relaxed">
+                We're a manufacturer first. Every product — from soft orthopedic
+                braces and support belts to circumcision devices, surgical
+                gowns, and first aid supplies — is designed, stitched, and
+                quality-checked in-house at our own facility.
+              </p>
+            </div>
+          </RevealOnScroll>
+
+          <div className="grid sm:grid-cols-2 gap-4 content-start">
+            {whatWeDo.map((item, i) => {
+              const Icon = item.icon
+              return (
+                <RevealOnScroll key={item.label} delay={i * 0.06}>
+                  <div className="flex items-center gap-3 rounded-xl border border-steel-dark bg-paper/5 px-5 py-4 hover:border-orange transition-colors">
+                    <Icon size={18} className="text-orange-light shrink-0" />
+                    <span className="text-sm font-medium text-paper">{item.label}</span>
+                  </div>
+                </RevealOnScroll>
+              )
+            })}
+          </div>
         </div>
       </section>
 
       {/* OUR APPROACH */}
-      <section className="bg-card/60 border-y border-steel-light">
+      <section className="bg-paper border-y border-steel-light">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
           <RevealOnScroll>
             <p className="eyebrow mb-3">Our Approach</p>
