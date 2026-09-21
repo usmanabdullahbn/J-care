@@ -30,6 +30,8 @@ import tq01 from '../assets/products/tournquet.jpeg'
 import bd01 from '../assets/products/bd01-abdominal-binder.png'
 import ab02 from '../assets/products/ab02-abdominal-belt.png'
 import ga01 from '../assets/products/ga01-guedel-airways.png'
+import prb01 from '../assets/products/prb01-patient-restraint-belt.png'
+import pcs01 from '../assets/products/pcs01-patient-carrying-sheet.png'
 
 const filters = [
   'All',
@@ -242,6 +244,26 @@ const products = [
     sizes: 'Size 00 – 5, 7 sizes',
     compression: 'Sterile, single-use',
     image: ga01,
+    fit: 'contain',
+  },
+  {
+    code: 'JK-PRB01',
+    name: 'Patient Restraint Belt',
+    category: 'Medical Devices',
+    material: 'Padded nylon webbing, quick-release buckle',
+    sizes: 'One size, adjustable',
+    compression: 'Adjustable',
+    image: prb01,
+    fit: 'contain',
+  },
+  {
+    code: 'JK-PCS01',
+    name: 'Patient Carrying Sheet',
+    category: 'Medical Devices',
+    material: 'Reinforced waterproof fabric, multiple carry handles',
+    sizes: 'One size',
+    compression: '—',
+    image: pcs01,
     fit: 'contain',
   },
   {
