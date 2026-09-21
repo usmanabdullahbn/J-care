@@ -11,6 +11,16 @@ const links = [
   { to: '/contact', label: 'Contact' },
 ]
 
+const categories = [
+  'Collars',
+  'Back & Waist Belts',
+  'Knee Supports',
+  'Wrist & Hand',
+  'Recovery Aids',
+  'Medical Devices',
+  'Surgical Wear',
+]
+
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -118,6 +128,20 @@ export default function Navbar() {
                   {link.label}
                 </NavLink>
               ))}
+
+              <div className="flex flex-col gap-3 pl-4 border-l border-steel-light">
+                {categories.map((cat) => (
+                  <NavLink
+                    key={cat}
+                    to={`/products?category=${encodeURIComponent(cat)}`}
+                    onClick={() => setOpen(false)}
+                    className="font-mono text-xs tracking-wide uppercase text-steel-dark hover:text-orange transition-colors"
+                  >
+                    {cat}
+                  </NavLink>
+                ))}
+              </div>
+
               <NavLink
                 to="/contact"
                 onClick={() => setOpen(false)}
