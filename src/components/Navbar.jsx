@@ -11,16 +11,6 @@ const links = [
   { to: '/contact', label: 'Contact' },
 ]
 
-const categories = [
-  'Collars',
-  'Back & Waist Belts',
-  'Knee Supports',
-  'Wrist & Hand',
-  'Recovery Aids',
-  'Medical Devices',
-  'Surgical Wear',
-]
-
 export default function Navbar() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -46,7 +36,7 @@ export default function Navbar() {
             alt="J-Kare Surgical Store"
             className="h-12 w-12 object-contain transition-transform group-hover:scale-105"
           />
-          <span className="hidden sm:flex flex-col leading-none">
+          <span className="flex flex-col leading-none">
             <span className="font-display font-semibold text-lg tracking-tight text-ink">J-Kare</span>
             <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-orange">Surgical Store</span>
           </span>
@@ -128,20 +118,6 @@ export default function Navbar() {
                   {link.label}
                 </NavLink>
               ))}
-
-              <div className="flex flex-col gap-3 pl-4 border-l border-steel-light">
-                {categories.map((cat) => (
-                  <NavLink
-                    key={cat}
-                    to={`/products?category=${encodeURIComponent(cat)}`}
-                    onClick={() => setOpen(false)}
-                    className="font-mono text-xs tracking-wide uppercase text-steel-dark hover:text-orange transition-colors"
-                  >
-                    {cat}
-                  </NavLink>
-                ))}
-              </div>
-
               <NavLink
                 to="/contact"
                 onClick={() => setOpen(false)}
