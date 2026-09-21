@@ -16,7 +16,7 @@ export default function Footer() {
             <span className="font-display font-semibold text-lg">J-Kare Surgical</span>
           </div>
           <p className="text-sm text-steel-light max-w-xs">
-            Orthopedic braces, belts and mobility supports — designed, stitched
+            Soft orthopedic braces, belts and mobility supports — designed, stitched
             and quality-checked in Karachi. Retail and wholesale.
           </p>
         </div>

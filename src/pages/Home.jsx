@@ -98,7 +98,7 @@ export default function Home() {
             className="mt-6 text-steel-dark text-lg max-w-xl"
           >
             J-Kare Surgical manufactures a diverse range of medical,
-            orthopedic and healthcare products for distributors and
+            soft orthopedic and healthcare products for distributors and
             businesses across Pakistan and international markets — with
             in-house production, consistent quality, and reliable supply.
           </motion.p>
@@ -154,7 +154,7 @@ export default function Home() {
               One catalog, every category covered.
             </h2>
             <p className="mt-4 text-steel-dark max-w-xl">
-              From orthopedic braces to surgical wear and medical devices —
+              From soft orthopedic braces to surgical wear and medical devices —
               manufactured in-house, ready for retail or wholesale.
             </p>
           </div>

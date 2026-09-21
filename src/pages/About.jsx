@@ -53,7 +53,7 @@ export default function About() {
           </h1>
           <p className="mt-6 text-steel-dark text-lg max-w-2xl">
             J-Kare Surgical is a Karachi-based manufacturer of medical,
-            orthopedic, and surgical products, supplying distributors,
+            soft orthopedic, and surgical products, supplying distributors,
             pharmacies, medical stores, and hospitals across Pakistan — with
             a growing export presence in African markets including Nigeria
             and Tanzania.
@@ -71,7 +71,7 @@ export default function About() {
             A focused range, manufactured under one roof.
           </h2>
           <p className="mt-5 text-steel-dark leading-relaxed max-w-md">
-            We supply a wide range of medical and orthopedic products
+            We supply a wide range of medical and soft orthopedic products
             tailored to the demanding environments of modern healthcare
             facilities, including:
           </p>
@@ -79,7 +79,7 @@ export default function About() {
           <div className="mt-8 rounded-2xl bg-ink text-paper px-6 py-6 flex items-start gap-4">
             <ShieldCheck size={22} className="text-orange-light shrink-0 mt-0.5" />
             <p className="text-sm text-steel-light leading-relaxed">
-              We're a manufacturer first. Every product — from orthopedic
+              We're a manufacturer first. Every product — from soft orthopedic
               braces and support belts to circumcision devices, surgical
               gowns, and first aid supplies — is designed, stitched, and
               quality-checked in-house at our own facility.
