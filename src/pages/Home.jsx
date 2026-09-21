@@ -235,7 +235,7 @@ export default function Home() {
           </div>
           <NavLink
             to="/products"
-            className="group inline-flex items-center gap-2 font-mono text-xs tracking-wide uppercase text-orange hover:text-orange-dark transition-colors"
+            className="group hidden sm:inline-flex items-center gap-2 font-mono text-xs tracking-wide uppercase text-orange hover:text-orange-dark transition-colors"
           >
             See more
             <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -271,6 +271,14 @@ export default function Home() {
             </RevealOnScroll>
           ))}
         </div>
+
+        <NavLink
+          to="/products"
+          className="group sm:hidden mt-10 flex items-center justify-center gap-2 font-mono text-xs tracking-wide uppercase text-orange hover:text-orange-dark transition-colors"
+        >
+          See more
+          <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+        </NavLink>
       </section>
     </PageWrapper>
   )
