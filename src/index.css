@@ -8,6 +8,9 @@ html {
 
 body {
   @apply bg-paper text-ink font-body antialiased;
+  /* prevents the browser from silently re-adjusting scroll position when
+     the outgoing/incoming page content swaps during route transitions */
+  overflow-anchor: none;
 }
 
 ::selection {
