@@ -36,11 +36,15 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-steel-light">
             <li className="flex items-center gap-2">
               <Phone size={14} className="text-orange-light shrink-0" />
-              +92 000 0000000
+              <a href="tel:+923043805848" className="hover:text-orange-light transition-colors">
+                0304 3805848
+              </a>
             </li>
             <li className="flex items-center gap-2">
               <Mail size={14} className="text-orange-light shrink-0" />
-              info@jkaresurgical.com
+              <a href="mailto:info@jkaresurgical.com" className="hover:text-orange-light transition-colors">
+                info@jkaresurgical.com
+              </a>
             </li>
             <li className="flex items-start gap-2">
               <MapPin size={14} className="text-orange-light shrink-0 mt-0.5" />
