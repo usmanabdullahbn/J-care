@@ -47,7 +47,7 @@ export default function Contact() {
         <RevealOnScroll>
           <p className="eyebrow mb-4">Get in touch</p>
           <h1 className="font-display font-semibold text-4xl sm:text-5xl text-ink max-w-2xl leading-[1.1]">
-            Retail order, wholesale quote, or a custom size — let's talk.
+            Looking to stock our products? Let's talk.
           </h1>
         </RevealOnScroll>
       </section>
