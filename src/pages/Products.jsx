@@ -32,6 +32,9 @@ import ab02 from '../assets/products/ab02-abdominal-belt.png'
 import ga01 from '../assets/products/ga01-guedel-airways.png'
 import prb01 from '../assets/products/prb01-patient-restraint-belt.png'
 import pcs01 from '../assets/products/pcs01-patient-carrying-sheet.png'
+import eth01 from '../assets/products/eth01-et-tube-holder.png'
+import ivs01 from '../assets/products/ivs01-iv-cannula-splint.png'
+import tsp01 from '../assets/products/tsp01-thumb-spica.png'
 
 const filters = [
   'All',
@@ -274,6 +277,35 @@ const products = [
     compression: 'Adjustable, high compression',
     image: tq01,
     fit: 'contain',
+  },
+  {
+    code: 'JK-ETH01',
+    name: 'Endotracheal (ET) Tube Holder',
+    category: 'Medical Devices',
+    material: 'Soft woven strap, adjustable fastening',
+    sizes: 'One size, adjustable',
+    compression: 'Adjustable',
+    image: eth01,
+    fit: 'contain',
+  },
+  {
+    code: 'JK-IVS01',
+    name: 'I.V Cannula Splint',
+    category: 'Medical Devices',
+    material: 'Foam-padded splint',
+    sizes: 'One size',
+    compression: '—',
+    image: ivs01,
+    fit: 'contain',
+  },
+  {
+    code: 'JK-TSP01',
+    name: 'Thumb Spica Splint',
+    category: 'Wrist & Hand',
+    material: 'Breathable fabric wrap, thumb immobiliser',
+    sizes: 'One size, adjustable',
+    compression: 'Firm',
+    image: tsp01,
   },
 ]
 
