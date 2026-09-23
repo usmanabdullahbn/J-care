@@ -46,15 +46,6 @@ const filters = [
 
 const products = [
   {
-    code: 'JK-HC01',
-    name: 'Hot & Cold Therapy Gel Pack',
-    category: 'Recovery Aids',
-    material: 'Reusable gel, microwaveable',
-    sizes: 'One size',
-    compression: '—',
-    image: hc01,
-  },
-  {
     code: 'JK-PB01',
     name: 'Circumcision Device',
     category: 'Medical Devices',
@@ -62,16 +53,6 @@ const products = [
     sizes: '1.1 – 1.9 cm, 9 sizes',
     compression: 'Sterile, single-use',
     image: pb01,
-    fit: 'contain',
-  },
-  {
-    code: 'JK-TQ01',
-    name: 'Buckle Quick Release Tourniquet',
-    category: 'Medical Devices',
-    material: 'Woven elastic strap, quick-release buckle',
-    sizes: 'One size',
-    compression: 'Adjustable, high compression',
-    image: tq01,
     fit: 'contain',
   },
   {
@@ -202,7 +183,7 @@ const products = [
   },
   {
     code: 'JK-TS01',
-    name: 'Thumb Spica Splint',
+    name: 'Wrist Splint',
     category: 'Wrist & Hand',
     material: 'Metal splint, breathable fabric',
     sizes: 'S / M / L / XL / XXL',
@@ -274,6 +255,25 @@ const products = [
     sizes: 'Free size',
     compression: 'Sterile, single-use',
     image: sg01,
+  },
+  {
+    code: 'JK-HC01',
+    name: 'Hot & Cold Therapy Gel Pack',
+    category: 'Recovery Aids',
+    material: 'Reusable gel, microwaveable',
+    sizes: 'One size',
+    compression: '—',
+    image: hc01,
+  },
+  {
+    code: 'JK-TQ01',
+    name: 'Buckle Quick Release Tourniquet',
+    category: 'Medical Devices',
+    material: 'Woven elastic strap, quick-release buckle',
+    sizes: 'One size',
+    compression: 'Adjustable, high compression',
+    image: tq01,
+    fit: 'contain',
   },
 ]
 
