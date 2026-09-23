@@ -396,7 +396,7 @@ export default function Products() {
                 </dl>
 
                 <a
-                  href="https://wa.me/920000000000"
+                  href="https://wa.me/923043805848"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
@@ -426,7 +426,7 @@ export default function Products() {
               we&apos;ll be happy to discuss it with you.
             </p>
             <a
-              href="https://wa.me/920000000000"
+              href="https://wa.me/923043805848"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 font-mono text-xs tracking-wide uppercase text-orange hover:text-orange-dark transition-colors"

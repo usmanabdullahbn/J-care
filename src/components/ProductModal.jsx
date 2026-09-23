@@ -79,7 +79,7 @@ export default function ProductModal({ product, onClose }) {
           </dl>
 
           <a
-            href="https://wa.me/920000000000"
+            href="https://wa.me/923043805848"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-orange px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-paper hover:bg-orange-dark transition-colors"

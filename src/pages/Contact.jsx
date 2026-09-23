@@ -8,8 +8,8 @@ const info = [
   {
     icon: Phone,
     label: 'Phone / WhatsApp',
-    value: '+92 000 0000000',
-    href: 'tel:+920000000000',
+    value: '0304 3805848',
+    href: 'tel:+923043805848',
   },
   {
     icon: Mail,

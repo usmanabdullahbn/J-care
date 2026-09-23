@@ -70,11 +70,11 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-4">
           <a
-            href="tel:+920000000000"
+            href="tel:+923043805848"
             className="flex items-center gap-2 font-mono text-xs tracking-wide text-steel-dark hover:text-orange transition-colors"
           >
             <Phone size={14} />
-            +92 000 0000000
+            0304 3805848
           </a>
           <NavLink
             to="/contact"
