@@ -14,6 +14,16 @@ import PageWrapper from '../components/PageWrapper.jsx'
 import RevealOnScroll from '../components/RevealOnScroll.jsx'
 import StitchDivider from '../components/StitchDivider.jsx'
 
+import cuttingTable from '../assets/factory/cutting-table.jpg'
+import stitchingLine from '../assets/factory/stitching-line.jpg'
+import finishedGoods from '../assets/factory/finished-goods.jpg'
+
+const floorPhotos = [
+  { label: 'Cutting table', image: cuttingTable },
+  { label: 'Stitching line', image: stitchingLine },
+  { label: 'Finished goods', image: finishedGoods },
+]
+
 const whatWeDo = [
   { icon: Stethoscope, label: 'Cervical Collars' },
   { icon: Bone, label: 'Back & Waist Belts' },
@@ -136,23 +146,28 @@ export default function About() {
         </div>
       </section>
 
-      {/* FACILITY NOTE / PLACEHOLDER IMAGERY STRIP */}
+      {/* FACILITY IMAGERY STRIP */}
       <section className="max-w-6xl mx-auto px-6 lg:px-8 py-24">
         <RevealOnScroll>
           <p className="eyebrow mb-3">On the floor</p>
           <h2 className="font-display font-semibold text-3xl text-ink max-w-xl mb-10">
-            Swap these in for real photos of your workshop and team.
+            A look inside our Karachi facility.
           </h2>
         </RevealOnScroll>
         <div className="grid sm:grid-cols-3 gap-6">
-          {['Cutting table', 'Stitching line', 'Finished goods'].map((label, i) => (
-            <RevealOnScroll key={label} delay={i * 0.08}>
-              <div className="aspect-[4/5] rounded-2xl bg-steel-light/30 border border-dashed border-steel flex items-center justify-center">
-                <span className="font-mono text-xs tracking-wide uppercase text-steel-dark text-center px-6">
-                  {label}
-                  <br />photo placeholder
-                </span>
+          {floorPhotos.map((photo, i) => (
+            <RevealOnScroll key={photo.label} delay={i * 0.08}>
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-steel-light">
+                <img
+                  src={photo.image}
+                  alt={photo.label}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
               </div>
+              <p className="mt-3 font-mono text-xs tracking-wide uppercase text-steel-dark text-center">
+                {photo.label}
+              </p>
             </RevealOnScroll>
           ))}
         </div>
