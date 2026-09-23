@@ -74,7 +74,7 @@ export default function Home() {
     <PageWrapper>
       {/* HERO */}
       <section className="relative overflow-hidden pt-14 pb-20 lg:pt-20 lg:pb-28">
-        <div className="hidden lg:block absolute inset-y-0 right-10 xl:right-16 w-[60%] xl:w-[56%]">
+        <div className="hidden lg:block absolute inset-y-0 right-0 w-[60%] xl:w-[56%]">
           <motion.img
             initial={{ opacity: 0, scale: 1.04 }}
             animate={{ opacity: 1, scale: 1 }}
