@@ -26,7 +26,7 @@ const info = [
   {
     icon: Clock,
     label: 'Store Hours',
-    value: 'Mon–Sat, 10:00 AM – 8:00 PM',
+    value: 'Mon–Sat, 10:00 AM – 7:00 PM',
     href: null,
   },
 ]
