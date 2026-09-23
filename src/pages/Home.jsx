@@ -37,7 +37,7 @@ const categories = [
 const popularProducts = [
   {
     code: 'JK-PB01',
-    name: 'PlastiBell Circumcision Device',
+    name: 'Circumcision Device',
     category: 'Medical Devices',
     image: pb01,
     fit: 'contain',

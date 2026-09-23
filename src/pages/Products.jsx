@@ -56,7 +56,7 @@ const products = [
   },
   {
     code: 'JK-PB01',
-    name: 'PlastiBell Circumcision Device',
+    name: 'Circumcision Device',
     category: 'Medical Devices',
     material: 'Medical-grade plastic',
     sizes: '1.1 – 1.9 cm, 9 sizes',
