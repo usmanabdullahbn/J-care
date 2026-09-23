@@ -73,86 +73,68 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-14 pb-20 lg:pt-20 lg:pb-28">
-        <div className="hidden lg:block absolute inset-y-0 right-0 w-[60%] xl:w-[56%]">
-          <motion.img
-            initial={{ opacity: 0, scale: 1.04 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            src={heroImage}
-            alt="J-Kare product range — braces, belts and supports"
-            className="h-full w-full object-cover object-center"
-            style={{
-              maskImage: 'linear-gradient(to right, transparent, black 32%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent, black 32%)',
-            }}
-          />
-        </div>
-
-        <div className="relative max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-xl">
-            <motion.p
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="eyebrow mb-5"
-            >
-              Manufacturer &amp; Retailer — Karachi, Pakistan
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-display font-semibold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.05] text-ink"
-            >
-              Manufacturing medical solutions for businesses worldwide.
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 text-steel-dark text-lg max-w-xl"
-            >
-              J-Kare Surgical manufactures a diverse range of medical,
-              soft orthopedic and healthcare products for distributors and
-              businesses across Pakistan and international markets — with
-              in-house production, consistent quality, and reliable supply.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="mt-9 flex flex-wrap gap-4"
-            >
-              <NavLink
-                to="/products"
-                className="group inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-paper hover:bg-orange-dark transition-colors"
-              >
-                View Products
-                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
-              </NavLink>
-              <NavLink
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-ink hover:border-ink transition-colors"
-              >
-                Wholesale Inquiry
-              </NavLink>
-            </motion.div>
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
+      <section className="max-w-6xl mx-auto px-6 lg:px-8 pt-14 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+        <div>
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="eyebrow mb-5"
+          >
+            Manufacturer &amp; Retailer — Karachi, Pakistan
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-display font-semibold text-4xl sm:text-5xl lg:text-[3.4rem] leading-[1.05] text-ink"
+          >
+            Manufacturing medical solutions for businesses worldwide.
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-12 lg:hidden"
+            className="mt-6 text-steel-dark text-lg max-w-xl"
           >
-            <img
-              src={heroImage}
-              alt="J-Kare product range — braces, belts and supports"
-              className="w-full rounded-2xl"
-            />
+            J-Kare Surgical manufactures a diverse range of medical,
+            soft orthopedic and healthcare products for distributors and
+            businesses across Pakistan and international markets — with
+            in-house production, consistent quality, and reliable supply.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-9 flex flex-wrap gap-4"
+          >
+            <NavLink
+              to="/products"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-paper hover:bg-orange-dark transition-colors"
+            >
+              View Products
+              <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full border border-ink/20 px-6 py-3.5 font-mono text-xs tracking-wide uppercase text-ink hover:border-ink transition-colors"
+            >
+              Wholesale Inquiry
+            </NavLink>
           </motion.div>
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, scale: 0.97 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+        >
+          <img
+            src={heroImage}
+            alt="J-Kare product range — braces, belts and supports"
+            className="w-full h-auto object-contain rounded-2xl lg:rounded-none lg:[mask-image:linear-gradient(to_right,transparent,black_12%)] lg:[-webkit-mask-image:linear-gradient(to_right,transparent,black_12%)]"
+          />
+        </motion.div>
       </section>
 
       <Marquee
